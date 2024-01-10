@@ -1,4 +1,21 @@
+/*
 .wrapper {
     width: 100% !important;
     background-color : darkslategray;
 }
+*/
+p {
+   text-align: center;
+}
+
+#stocks, #gainers-losers {
+    border-style: dashed;
+    border-color: crimson;
+    border-width: 5px;
+}
+
+/*
+#logo-header {
+   align-content:center;
+}
+*/
