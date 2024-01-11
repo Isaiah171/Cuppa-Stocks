@@ -1,10 +1,86 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuppa Stocks</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuppa Stocks</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/custom.css">
 </head>
-<body>
-    <h1>Hello, Stock Market People!</h1>
+
+<body class="container has-background-light p-5">
+    <div id="wrapper" class="container">
+      <section class="mb-4" id="logo-header">
+        <div class="container is-flex is-justify-content-center"> <!-- Added is-flex and is-justify-content-center classes -->
+          <div class="columns is-centered"> <!-- Added columns and is-centered classes -->
+            <div class="column">
+              <div class="is-flex is-flex-direction-column is-align-items-center"> <!-- Added is-flex, is-flex-direction-column, and is-align-items-center classes -->
+                <img src="./assets/images/cuppaStocksNew.png" alt="Cuppa Stocks logo" />
+              </div>
+              <div class="is-flex is-flex-direction-column is-align-items-center"> <!-- Added is-flex, is-flex-direction-column, and is-align-items-center classes -->
+                <p class="subtitle p-3">Your morning ritual, with a shot of market insights</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+    
+    <section class="has-background-dark p-2 mb-4" id="top-story">
+      <div class="is-flex is-justify-content-center py-4">
+        <div class="container">
+            <p class="title has-text-light">Today's Top Story</p>
+        </div>
+      </div>
+      <section class="block px-4 columns" id="indices">
+        <div class="column box m-4 is-align-items-center" id="dow-populate">
+            <p>Dow Jones</p>
+        </div>
+        <div class="column box m-4" id="s-and-p-populate">
+            <p>S&P 500</p>
+        </div>
+        <div class="column box m-4" id="nasdaq-populate">
+            <p>Nasdaq</p>
+        </div>
+      </section>
+    </section>
+
+    <!--Notable Stocks-->
+    <div id="stocks" class="container columns">
+        <!--Top and Bottom 5-->
+        <section class="column is-three-quarters px-4" id="gainers-losers">
+                <p class="title mt-4">Making Headlines</p>
+                <section class="top-five column">
+                    <p class="subtitle">Top 5 Gainers</p>
+                    <div id="top-five-gainers" class="column">
+                     <!--list is populated dynamically-->
+                     <ul></ul>
+                    </div>
+                </section>
+                <section class="bottom-five column">
+                    <p class="subtitle">Bottom 5 Losers</p>
+                    <div id="bottom-five-losers" class="column">
+                    <!--list is populated dynamically-->
+                     <ul></ul>
+                    </div>
+                </section>
+        </section>
+        <!--Favorite Stocks-->
+        <section class="column block" id="favorites">
+            <div>
+                <p class="title">Favorites</p> <!--to be replaced with heart icon-->
+                <div id="saved-favorites">
+                     <!--list is populated dynamically-->
+                    <ul></ul>
+                </div>
+            </div>
+        </section>
+    </div> <!--end the stocks section-->
+
+    <div class="block">
+
+    </div>
+
+    </div> <!--end the wrapper-->
+
 </body>
 </html>
