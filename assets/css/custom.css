@@ -1,21 +1,25 @@
-/*
-.wrapper {
-    width: 100% !important;
-    background-color : darkslategray;
-}
-*/
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/grid/columns.sass";
+
 p {
    text-align: center;
 }
 
-#stocks, #gainers-losers {
-    border-style: dashed;
-    border-color: crimson;
-    border-width: 5px;
+.story p {
+    text-align: left;
 }
 
-/*
-#logo-header {
-   align-content:center;
+#stocks, #gainers-losers, #search-for-stock, #news-stories, #stories-links-section {
+    border-style: solid;
+    border-color:darkgrey;
+    border-width: 1px;
+    padding: 4px;
 }
-*/
+
+div#search-result, div#hold-my-coffee {
+    display:inline-block;
+}
+
+div#marketeaux-import-stories {
+    column-count: 2;
+}

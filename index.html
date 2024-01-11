@@ -45,40 +45,86 @@
     </section>
 
     <!--Notable Stocks-->
-    <div id="stocks" class="container columns">
+    <div id="stocks" class="container columns"> <!--red label-->
         <!--Top and Bottom 5-->
-        <section class="column is-three-quarters px-4" id="gainers-losers">
+        <section class="column is-two-thirds px-4" id="gainers-losers"> <!--orange label-->
                 <p class="title mt-4">Making Headlines</p>
-                <section class="top-five column">
-                    <p class="subtitle">Top 5 Gainers</p>
-                    <div id="top-five-gainers" class="column">
+
+                  <div id="top-five-gainers" class="column">
+                  <p class="subtitle">Top 5 Gainers</p> <!--green label-->
                      <!--list is populated dynamically-->
-                     <ul></ul>
+                     <ul id="alpha-vantage-import-gainers"></ul>
                     </div>
-                </section>
-                <section class="bottom-five column">
-                    <p class="subtitle">Bottom 5 Losers</p>
-                    <div id="bottom-five-losers" class="column">
+
+                     <div id="top-five-losers" class="column">
+                      <p class="subtitle">Top 5 Losers</p>
                     <!--list is populated dynamically-->
-                     <ul></ul>
+                     <ul id="alpha-vantage-import-losers"></ul>
                     </div>
-                </section>
+
         </section>
         <!--Favorite Stocks-->
-        <section class="column block" id="favorites">
+        <section class="column block" id="favorites"> <!--pink label-->
             <div>
                 <p class="title">Favorites</p> <!--to be replaced with heart icon-->
                 <div id="saved-favorites">
                      <!--list is populated dynamically-->
-                    <ul></ul>
+                    <ul id="alpha-vantage-local-storage"></ul>
                 </div>
             </div>
         </section>
     </div> <!--end the stocks section-->
 
-    <div class="block">
-
+    <!--Start the Search section-->
+    <div id="search-for-stock">
+      <form>
+        <label for="find-stock">Find stock:</label><br />
+        <input type="text" id="find-stock" name="find-stock">
+        <input type="button" class="bulma-control-mixin" id="find-stock-API-trigger" value="Search"> <!--Replace with mag glass icon-->
+        <div id="search-result" class="ml-2 p-2 has-background-white">Returned Search Result here</div>
+          <button class="button save-to-fave">Heart Icon Button</button> <!--Replace text with a 'favorite' heart icon-->
+      </form>
+      <div id="hold-my-coffee" class="ml-3 has-background-dark box">
+        <p class="has-text-light">Coffee Cup Image</p>
+      </div> <!--img will replace, maybe "pinned" to the right-->
     </div>
+
+    <div id="stories-links-section" class="columns">
+      <section id="news-stories" class="column m-3 p-3">
+        <h2 class="subtitle">In Other News:</h2>
+        <div id="marketeaux-import-stories">
+          <div id="story1" class="story">
+            <h3>Story1 Title</h3>
+            <p>Story1 intro <a href="">read more ></a> </p>
+          </div>
+          <div id="story2" class="story">
+            <h3>Story2 Title</h3>
+            <p>Story2 intro <a href="">read more ></a> </p>
+          </div>
+          <div id="story3" class="story">
+            <h3>Story3 Title</h3>
+            <p>Story3 intro <a href="">read more ></a> </p>
+          </div>
+          <div id="story4" class="story">
+            <h3>Story4 Title</h3>
+            <p>Story4 intro <a href="">read more ></a> </p>
+          </div>
+          <div id="story5" class="story">
+            <h3>Story5 Title</h3>
+            <p>Story5 intro <a href="">read more ></a> </p>
+          </div>
+          <div id="story6" class="story">
+            <h3>Story6 Title</h3>
+            <p>Story6 intro <a href="">read more ></a> </p>
+          </div>
+      </section>
+      <div id="links" class="column">
+        <div class="has-background-dark">
+          <p class="subtitle has-text-light">Ready to Buy? Sell? Trade?</p>
+        </div>
+      </div>
+    </div>
+    
 
     </div> <!--end the wrapper-->
 
