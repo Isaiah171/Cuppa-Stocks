@@ -1,6 +1,38 @@
 @import "bulma/sass/utilities/_all.sass";
 @import "bulma/sass/grid/columns.sass";
 
+
+/* ___Custom color scheme___
+
+dark gray #363636 (Use Bulma classes  -dark)
+light putty #f5f5f5 (Use Bulma classes  -light)
+sky blue #bed5f7 (define as custom variable)
+teal dark #72A0C0 (define as custom variable)
+sky blue storm #697eab (define as custom variable)
+
+*/
+
+:root {
+--sky-blue: #bed5f7;
+--teal-dark: #72A0C0;
+--sky-blue-storm: #697eab; 
+}
+
+.BG-custom-color-1 {
+    background-color:  var(--sky-blue);
+}
+
+.BG-custom-color-2 {
+    background-color: var(--teal-dark);
+}
+
+.BG-custom-color-3 {
+    background-color: var(--sky-blue-storm);
+}
+
+/* ___Text Styles___  */
+
+
 p {
    text-align: center;
 }
@@ -9,12 +41,14 @@ p {
     text-align: left;
 }
 
-#stocks, #gainers-losers, #search-for-stock, #news-stories, #stories-links-section {
+#stocks, #gainers-losers, #search-for-stock, #news-stories, #stories-links-section, .testing {
     border-style: solid;
     border-color:darkgrey;
     border-width: 1px;
     padding: 4px;
 }
+
+/* ___Layout___  */
 
 div#search-result, div#hold-my-coffee {
     display:inline-block;
