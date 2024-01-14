@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cuppa Stocks</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/76aa510a07.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/custom.css">
 </head>
 
@@ -47,26 +48,27 @@
     <!--Notable Stocks-->
     <div id="stocks" class="container columns"> <!--red label-->
         <!--Top and Bottom 5-->
-        <section class="column is-two-thirds px-4" id="gainers-losers"> <!--orange label-->
+        <level class="column is-two-thirds px-4" id="gainers-losers"> <!--orange label-->
                 <p class="title mt-4">Making Headlines</p>
 
-                  <div id="top-five-gainers" class="column">
-                  <p class="subtitle">Top 5 Gainers</p> <!--green label-->
+                  <level-left id="top-five-gainers">
+                    <p class="subtitle">Top 5 Gainers</p> <!--green label-->
                      <!--list is populated dynamically-->
-                     <ul id="alpha-vantage-import-gainers"></ul>
-                    </div>
+                     <level-item id="alpha-vantage-import-gainers"></level-item>
+                  </level-left>
 
-                     <div id="top-five-losers" class="column">
-                      <p class="subtitle">Top 5 Losers</p>
+                  <level-right id="top-five-losers">
+                    <p class="subtitle">Top 5 Losers</p>
                     <!--list is populated dynamically-->
-                     <ul id="alpha-vantage-import-losers"></ul>
-                    </div>
+                    <level-item id="alpha-vantage-import-losers"></level-item>
+                  </level-right>
 
-        </section>
+          </level>
+
         <!--Favorite Stocks-->
         <section class="column block" id="favorites"> <!--pink label-->
             <div>
-                <p class="title">Favorites</p> <!--to be replaced with heart icon-->
+              <i class="fa-solid fa-heart "></i> <!--to be replaced with heart icon-->
                 <div id="saved-favorites">
                      <!--list is populated dynamically-->
                     <ul id="alpha-vantage-local-storage"></ul>
@@ -80,10 +82,15 @@
       <form>
         <label for="find-stock">Find stock:</label><br />
         <input type="text" id="find-stock" name="find-stock">
-        <input type="button" class="bulma-control-mixin" id="find-stock-API-trigger" value="Search"> <!--Replace with mag glass icon-->
-        <div id="search-result" class="ml-2 p-2 has-background-white">Returned Search Result here</div>
-          <button class="button save-to-fave">Heart Icon Button</button> <!--Replace text with a 'favorite' heart icon-->
+          <button class="btn">
+             <i class="fa-solid fa-magnifying-glass" id="find-stock-API-trigger"></i>
+          </button>
+       <div id="search-result" class="ml-2 p-2 has-background-white">Returned Search Result here
+          <button class="btn">
+            <i class="fa-solid fa-heart" id="save-to-fave"></i>
+         </button>
       </form>
+      
       <div id="hold-my-coffee" class="ml-3 has-background-dark box">
         <p class="has-text-light">Coffee Cup Image</p>
       </div> <!--img will replace, maybe "pinned" to the right-->
@@ -118,10 +125,13 @@
             <p>Story6 intro <a href="">read more ></a> </p>
           </div>
       </section>
-      <div id="links" class="column">
-        <div class="has-background-dark">
-          <p class="subtitle has-text-light">Ready to Buy? Sell? Trade?</p>
-        </div>
+      <card id="links" class="column">
+        <card-header class= "BG-custom-color-2" id="CTA">
+          <card-header-title>Ready to Buy? Sell? Trade?</card-header-title>
+          </div>
+          <div id="links-manage-mine">
+
+          </div>
       </div>
     </div>
     
