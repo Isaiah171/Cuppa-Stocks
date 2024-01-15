@@ -8,3 +8,7 @@ function mainFunction() {
     today.textContent = whatsTodayDay + ", " + whatsTodayDate;
    /* today.setAttribute("style", "font-family: "); */
 }
+
+window.onload = function () {
+	mainFunction();
+}

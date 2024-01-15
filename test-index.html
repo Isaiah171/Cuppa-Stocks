@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <script src="https://kit.fontawesome.com/76aa510a07.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="./assets/css/custom.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,700&display=swap" rel="stylesheet">
 </head>
 
 <body class="has-text-centered has-background-light">
@@ -19,9 +22,9 @@
               <div class="has-text-centered">
                 <img src="./assets/images/cuppaStocksNew.png" alt="Cuppa Stocks logo" />
               </div>
-              <p class="subtitle p-3 mb-3 is-italic">Your morning ritual, with a shot of market insights</p>
+              <p class="subtitle p-3 mb-2 is-italic">Your morning ritual, with a shot of market insights</p>
               <!--reference date.js-->
-              <div id="current-day" class="py-1 mb-3 min-height-100 has-text-centered has-text-dark">Placeholder Text</div>
+              <div id="current-day" class="py-1 mb-3 min-height-100 has-text-centered has-text-dark"></div>
             </div>
           </header>
 
@@ -33,16 +36,16 @@
 
                 <section id="top-story" class="section column is-full testing">
 
-                    <div class="title block columns is-full is-uppercase has-text-centered">
-                        <h1>Today's Top Story</h1>
+                    <div class="title has-text-centered pt-2">
+                        <h1 class="newsreader">Today's Top Story</h1>
                     </div>
 
                     <div id="indices" class="columns is-full has-background-dark">
                         <div id="dow-populate" class="column is-one-fifth has-background-light">DJIA</div>
                         <div id="s-and-p-populate" class="column is-one-fifth has-background-light">S&P 500</div>
                         <div id="nasdaq-populate" class="column is-one-fifth has-background-light">Nasdaq</div>
-                        <div id="hold-my-coffee" class="column is-two-fifths">
-                            <img src="./assets/images/non-steamy-cuppa.png" />
+                        <div id="hold-my-coffee" class="column is-two-fifths p-5">
+                            <img src="./assets/images/non-steamy-cuppa.png" class="size-overide" />
                        </div>
                    </div>
                   

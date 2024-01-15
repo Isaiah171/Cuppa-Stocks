@@ -55,6 +55,9 @@ sky blue storm #697eab (define as custom variable)
 .container {
     width:100%;
 }
+img.size-overide {
+	  max-width: 50%;
+}
 
 header.container, main.container {
     margin:0;
@@ -71,6 +74,13 @@ p {
     text-align: left;
 }
 
+h1.newsreader {
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
 .testing {
     border-style: solid;
     border-color:rgb(56, 4, 4);
@@ -78,6 +88,7 @@ p {
 }
 
 #current-day {
+	font-family: "Newsreader", serif;
     border-top: solid 2px var(--sky-blue-storm);
     border-bottom: solid 2px var(--sky-blue-storm);
 }
