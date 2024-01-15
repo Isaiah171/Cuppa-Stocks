@@ -2,13 +2,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js">
+  </script>
   <title>Cuppa Stocks</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <script src="https://kit.fontawesome.com/76aa510a07.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/custom.css">
 </head>
 
-<body class="container has-background-light p-5">
+<body class="container has-background-light p-5 columns">
     <div id="wrapper" class="container">
       <section class="mb-4" id="logo-header">
         <div class="container is-flex is-justify-content-center"> <!-- Added is-flex and is-justify-content-center classes -->
@@ -125,9 +127,15 @@
             <p>Story6 intro <a href="">read more ></a> </p>
           </div>
       </section>
-      <card id="links" class="column">
-        <card-header class= "BG-custom-color-2" id="CTA">
-          <card-header-title>Ready to Buy? Sell? Trade?</card-header-title>
+      <card id="links" class="p-2 testing column">
+        <card-header class= "BG-custom-color-2 px-2 py-4 has-text-light" id="CTA">
+          <card-header-title class="is-centered">Ready to Buy? Sell? Trade?</card-header-title>
+          <card-header-icon><i class="fa-solid fa-business-time"></i></card-header-icon>
+            <div>
+             <card-content has-text-dark><h3>Take me to </h3><a href="https://robinhood.com/login"><img src="./assets/images/robinhood-logo.png" alt="logo for Robinhood"/></a></card-content>
+              <h3>Take me to </h3><a href="https://passport.webull.com/auth/simple/login?source=brand-gl-search-pc&hl=en&redirect_uri=https%3A%2F%2Fwww.webull.com%2Fcenter"><img src="./assets/images/webull-logo.png" alt="logo for Webull"/></a>
+              <h3>Take me to </h3><a href="https://signin.acorns.com/"><img src="./assets/images/acorns-logo.png" alt="logo for Acorns"/></a>
+          </div>
           </div>
           <div id="links-manage-mine">
 
@@ -137,6 +145,7 @@
     
 
     </div> <!--end the wrapper-->
-
+<!--my custom javascript-->
+<script src="./Assets/date.js"></script>
 </body>
 </html>
