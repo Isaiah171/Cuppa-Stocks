@@ -9,35 +9,56 @@ sky blue storm #697eab (define as custom variable)
 */
 
 :root {
+--coffee: #8c6849;
+--wheat: #eadece;
+--wheat-dark: #b9a589;
+--copper: #db842c;
+--corn: #fff691;
+--corn-dark: #d9cd23;
+--oil: #523909;
 --sky-blue: #bed5f7;
 --teal-dark: #72A0C0;
 --sky-blue-storm: #697eab; 
     text-align: center;
 }
 
-.custom-color-1 {
-    color: var(--sky-blue);
+.coffee {
+    background-color:  var(--coffee);
 }
 
-.BG-custom-color-1 {
-    background-color:  var(--sky-blue);
+.oil {
+    background-color: var(--oil);
 }
 
-.custom-color-2 {
-    background-color: var(--teal-dark);
+.copper {
+    background-color: var(--copper);
 }
 
-.BG-custom-color-2 {
-    background-color: var(--teal-dark);
+.corn {
+    background-color: var(--corn-dark);
 }
 
-.custom-color-3 {
-    background-color: var(--sky-blue-storm);
+.wheat {
+    background-color: var(--wheat-dark);
 }
 
-.BG-custom-color-3 {
-    background-color: var(--sky-blue-storm);
+li span {
+    color: white;
 }
+
+li.is-active span {
+    color: black;
+}
+
+/* Override the background color of the active tab */
+.tabs.is-tab .is-active .coffee {
+    background-color:var(--coffee); /* Your desired color */
+  }
+  
+  /* Override the text color of the inactive tabs */
+  .tabs.is-tab li:not(.is-active) a {
+    color: #0000ff; /* Your desired color */
+  }
 
 .column {
     margin: 1em !important; 
