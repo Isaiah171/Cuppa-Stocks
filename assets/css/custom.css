@@ -9,113 +9,133 @@ sky blue storm #697eab (define as custom variable)
 */
 
 :root {
---coffee: #8c6849;
---wheat: #eadece;
---wheat-dark: #b9a589;
---copper: #db842c;
---corn: #fff691;
---corn-dark: #d9cd23;
---oil: #523909;
---sky-blue: #bed5f7;
---teal-dark: #72A0C0;
---sky-blue-storm: #697eab; 
-    text-align: center;
-}
-
-.coffee {
-    background-color:  var(--coffee);
-}
-
-.oil {
-    background-color: var(--oil);
-}
-
-.copper {
-    background-color: var(--copper);
-}
-
-.corn {
-    background-color: var(--corn-dark);
-}
-
-.wheat {
-    background-color: var(--wheat-dark);
-}
-
-li span {
-    color: white;
-}
-
-li.is-active span {
-    color: black;
-}
-
-/* Override the background color of the active tab */
-.tabs.is-tab .is-active .coffee {
-    background-color:var(--coffee); /* Your desired color */
-  }
-  
-  /* Override the text color of the inactive tabs */
-  .tabs.is-tab li:not(.is-active) a {
-    color: #0000ff; /* Your desired color */
-  }
-
-.column {
-    margin: 1em !important; 
-    padding: .5em !important; 
-   /* background-color: var(--sky-blue); */
-}
-
-
-.columns {
-    padding: .5em !important;
-    margin: 1 !important;
-   /* background-color: var(--sky-blue-storm);*/
-}
-
-.container {
-    width:100%;
-}
-img.size-overide {
-	  max-width: 50%;
-}
-
-header.container, main.container {
-    margin:0;
-}
-
-/* ___Text Styles___  */
-
-
-p {
-   text-align: center;
-}
-
-.story p {
-    text-align: left;
-}
-
-h1.newsreader {
-  font-family: "Newsreader", serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.testing {
-    border-style: solid;
-    border-color:rgb(56, 4, 4);
-    border-width: 2px;
-}
-
-#current-day {
-	font-family: "Newsreader", serif;
-    border-top: solid 2px var(--sky-blue-storm);
-    border-bottom: solid 2px var(--sky-blue-storm);
-}
-
-/* ___Layout___  */
-
-div#marketeaux-import-stories {
-    column-count: 2;
-}
+    --coffee: #8c6849;
+    --wheat: #eadece;
+    --wheat-dark: #b9a589;
+    --copper: #db842c;
+    --corn: #fff691;
+    --corn-dark: #d9cd23;
+    --oil: #523909;
+    --sky-blue: #bed5f7;
+    --teal-dark: #72A0C0;
+    --sky-blue-storm: #697eab; 
+        text-align: center;
+    }
+    
+    /*Uncomment when ready to test visibility*/
+    /*
+    .default-hide {
+        display:none;
+    }
+    */
+    
+    li.coffee, .oil, .copper, .corn, .wheat {
+        background-color: white;
+    }
+    
+    
+    .tabs .is-tab .is-active .coffee {
+        background-color:  var(--coffee);
+    }
+    
+    .tabs.is-tab .is-active .oil {
+        background-color: var(--oil);
+    }
+    
+    .copper .is-active, .copper.is-active .copper {
+        background-color: var(--copper);
+    }
+    
+    .corn .is-active, .corn.is-active .copper {
+        background-color: var(--corn-dark);
+    }
+    
+    .wheat .is-active, .tabs.is-tab .is-active .wheat {
+        background-color: var(--wheat-dark);
+    }
+    
+    /*Text color in the tabs*/
+    
+    li span {
+        color: black;
+    }
+    li.is-active span {
+        color: white;
+    }
+    
+    img.icon-overlay {
+      opacity: 0.5;
+    }
+        
+    
+    /* Override the background color of the active tab
+    .tabs.is-tab .is-active .coffee {
+        background-color:var(--coffee); 
+    }
+      
+      
+      /* Override the text color of the inactive tabs
+      .tabs.is-tab li:not(.is-active) a {
+        color: #0000ff; 
+      }
+      */
+    
+    .column {
+        margin: 1em !important; 
+        padding: .5em !important; 
+       /* background-color: var(--sky-blue); */
+    }
+    
+    
+    .columns {
+        padding: .5em !important;
+        margin: 1 !important;
+       /* background-color: var(--sky-blue-storm);*/
+    }
+    
+    .container {
+        width:100%;
+    }
+    img.size-overide {
+          max-width: 50%;
+    }
+    
+    header.container, main.container {
+        margin:0;
+    }
+    
+    /* ___Text Styles___  */
+    
+    
+    p {
+       text-align: center;
+    }
+    
+    .story p {
+        text-align: left;
+    }
+    
+    h1.newsreader {
+      font-family: "Newsreader", serif;
+      font-optical-sizing: auto;
+      font-weight: 200;
+      font-style: normal;
+    }
+    
+    .testing {
+        border-style: solid;
+        border-color:rgb(56, 4, 4);
+        border-width: 2px;
+    }
+    
+    #current-day {
+        font-family: "Newsreader", serif;
+        border-top: solid 2px var(--sky-blue-storm);
+        border-bottom: solid 2px var(--sky-blue-storm);
+    }
+    
+    /* ___Layout___  */
+    
+    div#marketeaux-import-stories {
+        column-count: 2;
+    }
