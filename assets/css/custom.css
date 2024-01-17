@@ -22,51 +22,112 @@ sky blue storm #697eab (define as custom variable)
         text-align: center;
     }
     
-    /*Uncomment when ready to test visibility*/
-    /*
-    .default-hide {
-        display:none;
-    }
-    */
-    
-    li.coffee, .oil, .copper, .corn, .wheat {
+
+.default-hide {
+    display: none !important;
+}
+
+
+li span {
+    color: black;
+}
+li.is-active span {
+    color: white;
+}
+   
+#tab-holder li {
         background-color: white;
     }
-    
-    
-    .tabs .is-tab .is-active .coffee {
+
+#tab-holder li.is-active.coffee {
+        background-color: var(--coffee);
+    }
+
+#tab-holder li.is-active.wheat {
+    background-color: var(--wheat-dark);
+}
+
+#tab-holder li.is-active.corn {
+    background-color: var(--corn-dark);
+}
+
+#tab-holder li.is-active.copper {
+    background-color: var(--copper);
+}
+
+#tab-holder li.is-active.oil {
+    background-color: var(--oil);
+}
+
+.tabs.is-boxed li.is-active a {
+        background:none;
+}
+
+    .is-active.coffee {
         background-color:  var(--coffee);
     }
+
+    .is-active.wheat {
+        background-color:  var(--wheat-dark);
+    }
+
+    .is-active.copper {
+        background-color:  var(--copper);
+    }
+
+    .is-active.corn {
+        background-color:  var(--corn-dark);
+    }
     
-    .tabs.is-tab .is-active .oil {
+    .is-active.oil {
         background-color: var(--oil);
     }
     
-    .copper .is-active, .copper.is-active .copper {
+    #coffee-stats, #wheat-stats, #copper-stats, #corn-stats, #oil-stats {
+        background-image: url(../images/analytics-graph.png);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        margin-top: 0 !important;
+    }
+
+    #links {
         background-color: var(--copper);
-    }
-    
-    .corn .is-active, .corn.is-active .copper {
-        background-color: var(--corn-dark);
-    }
-    
-    .wheat .is-active, .tabs.is-tab .is-active .wheat {
-        background-color: var(--wheat-dark);
+        border-color: white;
+        border-style: solid;
+        border-width: 5px;
     }
     
     /*Text color in the tabs*/
     
-    li span {
-        color: black;
-    }
-    li.is-active span {
-        color: white;
-    }
+
     
     img.icon-overlay {
       opacity: 0.5;
     }
-        
+    
+    img.shrink {
+        max-width: 50%;
+    }
+    
+    table {
+       margin-top:1.5em;
+       padding: .5em !important;
+    }
+
+    td {
+        padding: .1em;
+    }
+
+    table tr {
+        font-weight:500;
+        font-size: 85%;
+       }
+
+    table tr:first-child {
+       font-weight:700;
+       font-size: 100%;
+      }
+    
     
     /* Override the background color of the active tab
     .tabs.is-tab .is-active .coffee {
@@ -118,6 +179,7 @@ sky blue storm #697eab (define as custom variable)
     h1.newsreader {
       font-family: "Newsreader", serif;
       font-optical-sizing: auto;
+      font-size: 150%;
       font-weight: 200;
       font-style: normal;
     }

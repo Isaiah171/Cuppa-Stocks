@@ -34,7 +34,7 @@
             <!--For the sake of establishing columns-->
             <div class="columns">
 
-                <section id="top-story" class="section column is-full testing">
+                <section id="top-story" class="section column is-full">
 
                     <div class="title has-text-centered pt-2">
                         <h1 class="newsreader">Today's Top Story</h1>
@@ -53,35 +53,45 @@
 
             </div>
 
-        <section id="stats" class="section column is-three-quarters testing has-background-white">
-            <div id="commodities" class="title columns is-full">Commodity Roundup</div>
-            <div  id="tab-holder" class="tabs is-boxed is-fullwidth">
-                <ul>
-                  <li class="coffee is-active">
+<!--Commodities section-->
+      <div class="columns"> <!-- to establish columns-->
+        <section id="stats" class="section column is-two-thirds has-background-white">
+
+            <div id="commodities" class="title is-full has-text-centered"><h1 class="newsreader mt-3">Commodity Roundup</h1></div>
+            
+            <div  id="tab-holder" class="tabs is-boxed is-fullwidth mb-0 ">
+                
+              <ul>
+                  <!--coffee tab-->
+                  <li class="coffee is-active" data-tab="coffee-price-display">
                     <a>
                       <span class="icon is-large"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i></span>
                       <span>Coffee</span>
                     </a>
                   </li>
-                  <li class="wheat">
+                  <!--wheat tab-->                  
+                  <li class="wheat is-active" data-tab="wheat-price-display">
                     <a>
                       <span class="icon is-large"><i class="fa-solid fa-wheat-awn" aria-hidden="true"></i></span>
                       <span>Wheat</span>
                     </a>
                   </li>
-                  <li class="copper">
+                  <!--copper tab-->
+                  <li class="copper is-active" data-tab="copper-price-display">
                     <a>
                       <span class="icon is-large"><i class="fa-solid fa-coins" aria-hidden="true"></i></span>
                       <span>Copper</span>
                     </a>
                   </li>
-                  <li class="corn">
+                  <!--corn tab-->
+                  <li class="corn is-active" data-tab="corn-price-display">
                     <a>
                       <span class="icon is-large"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
                       <span>Corn</span>
                     </a>
                   </li>
-                  <li class="oil">
+                  <!--oil tab-->
+                  <li class="oil is-active" data-tab="oil-price-display">
                     <a>
                       <span class="icon is-large"><i class="fa-solid fa-truck-droplet" aria-hidden="true"></i></span>
                       <span>Oil</span>
@@ -91,14 +101,15 @@
               </div>
 			  
 			  <!--Commodity Price Panels -->
-			  <div id="commodity-price-display">
-			  
-				<div id="coffee-price-display" class="coffee is-boxed is-fullwidth columns default-hide is-active">
-					<div class="background-icon column is-one-quarter is-active">
+			  <div id="commodity-price-display" class="is-fullwidth">
+
+			  <!--Coffee Panel-->
+				<div id="coffee-price-display" class="coffee is-boxed is-fullwidth columns default-hide p-6">
+					<div class="background-icon column is-one-quarter">
 						<img src="./assets/images/coffee-icon-rev.png" alt="coffee icon" class="icon-overlay" />
 					</div>
-					<div id="coffee-stats">
-						<table class="table">
+					<div id="coffee-stats" class="column is-vcentered">
+						<table class="table is-size-4">
 							<tr>
 								<td>Monthly</td>
 								<td>Quarterly</td>
@@ -110,15 +121,51 @@
 								<td id="coffee-a">per pound</td>
 							</tr>
 						</table>
-								
-					
-				
+					</div>
+        </div>
 
-            </div>
-        </section>
+        			  <!--Wheat Panel-->
+				<div id="wheat-price-display" class="default-hide wheat is-boxed is-fullwidth columns p-6">
+					<div class="background-icon column is-one-quarter">
+						<img src="./assets/images/wheat-icon-rev.png" alt="wheat icon" class="icon-overlay" />
+					</div>
+					<div id="wheat-stats" class="column is-vcentered">
+						<table class="table is-size-4">
+							<tr>
+								<td>Monthly</td>
+								<td>Quarterly</td>
+								<td>Annual</td>
+							</tr>
+							<tr>
+								<td id="wheat-m">per ton</td>
+								<td id="wheat-q">per ton</td>
+								<td id="wheat-a">per ton</td>
+							</tr>
+						</table>
+					</div>
+        </div>
 
-    <script src="assets/javascript/stocks.js"></script>
-    <script src="assets/javascript/snippet.js"></script>
+       <!--Copper Panel-->
+				<div id="copper-price-display" class="copper is-boxed is-fullwidth columns default-hide is-active p-6">
+					<div class="background-icon column is-one-quarter is-active">
+						<img src="./assets/images/copper-icon-rev.png" alt="copper icon" class="icon-overlay" />
+					</div>
+					<div id="copper-stats" class="column is-vcentered">
+						<table class="table is-size-4">
+							<tr>
+								<td>Monthly</td>
+								<td>Quarterly</td>
+								<td>Annual</td>
+							</tr>
+							<tr>
+								<td id="copper-m">per ton</td>
+								<td id="copper-q">per ton</td>
+								<td id="copper-a">per ton</td>
+							</tr>
+						</table>
+					</div>
+        </div>
+
 
         <section id="links" class="column is-one-quarter">
             <div class="columns is-full">
@@ -128,8 +175,72 @@
                 <block><h3>Take me to</h3><a class="button" target="_blank" href="https://signin.acorns.com/"><img src="./assets/images/acorns-logo.png" alt="logo for Acorns"/></a></block> 
              </div>
         </section>
+        <!--Corn Panel-->
+				<div id="corn-price-display" class="corn is-boxed is-fullwidth columns default-hide is-active p-6">
+					<div class="background-icon column is-one-quarter is-active">
+						<img src="./assets/images/corn-icon-rev.png" alt="corn icon" class="icon-overlay" />
+					</div>
+					<div id="corn-stats" class="column is-vcentered">
+						<table class="table is-size-4">
+							<tr>
+								<td>Monthly</td>
+								<td>Quarterly</td>
+								<td>Annual</td>
+							</tr>
+							<tr>
+								<td id="corn-m">per ton</td>
+								<td id="corn-q">per ton</td>
+								<td id="corn-a">per ton</td>
+							</tr>
+						</table>
+					</div>
+        </div>
+
+        <!--Oil Panel-->
+				<div id="oil-price-display" class="oil is-boxed is-fullwidth columns default-hide is-active p-6">
+					<div class="background-icon column is-one-quarter is-active">
+						<img src="./assets/images/oil-icon-rev.png" alt="oil icon" class="icon-overlay" />
+					</div>
+					<div id="oil-stats" class="column is-vcentered">
+						<table class="table is-size-4">
+							<tr>
+								<td>Monthly</td>
+								<td>Quarterly</td>
+								<td>Annual</td>
+							</tr>
+							<tr>
+								<td id="oil-m">per ton</td>
+								<td id="oil-q">per ton</td>
+								<td id="oil-a">per ton</td>
+							</tr>
+						</table>
+					</div>
+        </div>
+    </section>
+
+    <section id="links" class="section column is-one-third">
+      <div class="title">
+        <h1 class="is-small py-4 mb-4 has-text-light"><span class="is-italic">Ready to <span><span class="has-text-weight-bold">Buy? Sell? Trade?</span></h1>
+        
+        <div class="box mx-5">
+          <button class="button is-responsive is-medium">          
+            <p class="is-italic is-size-4 mr-2">Take me to</p><a href="https://robinhood.com/login"><img src="./assets/images/robinhood-logo.png" alt="logo for Robinhood"/></a></button>
+        </div>
+
+        <div class="box mx-5">
+          <button class="button is-responsive is-medium">          
+            <p class="is-italic is-size-4 mr-2">Take me to</p><a href="https://passport.webull.com/auth/simple/login?source=brand-gl-search-pc&hl=en&redirect_uri=https%3A%2F%2Fwww.webull.com%2Fcenter"><img src="./assets/images/webull-logo.png" alt="logo for Robinhood"/></a></button>
+        </div>
+
+        <div class="box mx-5">
+          <button class="button is-responsive is-medium">          
+            <p class="is-italic is-size-4 mr-2">Take me to</p><a href="https://signin.acorns.com/"><img src="./assets/images/acorns-logo.png" alt="logo for Acorns"/></a></button>
+        </div>
+</div>
+
         </main>
+         <script src="assets/javascript/stocks.js"></script>
+    <script src="assets/javascript/snippet.js"></script>
         <script src="./assets/javascript/date.js"></script>
 </body>
-
 </html>
