@@ -22,11 +22,11 @@ sky blue storm #697eab (define as custom variable)
         text-align: center;
     }
     
-/*
+
 .default-hide {
-    display: none !important;
+    display: none;
 }
-*/
+
 
 .show {
     display: block;
@@ -138,17 +138,17 @@ li.is-active span {
       }
     
     
-    /* Override the background color of the active tab
+     Override the background color of the active tab
     .tabs.is-tab .is-active .coffee {
         background-color:var(--coffee); 
     }
       
       
-      /* Override the text color of the inactive tabs
+       Override the text color of the inactive tabs
       .tabs.is-tab li:not(.is-active) a {
         color: #0000ff; 
       }
-      */
+      
     
     .column {
         margin: 1em !important; 
@@ -204,65 +204,34 @@ li.is-active span {
         border-top: solid 2px var(--sky-blue-storm);
         border-bottom: solid 2px var(--sky-blue-storm);
     }
+
+    /* Custom class for styling index numbers */
+  .number {
+    font-size: 50px; 
+}
+
+#favorite {
+    font-size: 30px; 
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
     
-    #favorites-access button {
-        border:none;
-        background:none;
-    }
-
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        bottom:20px;
-        right: 20px;
-        width: 90%;
-        height: 90%;
-        overflow: auto;
-        background-color: rgba(140,104,73,0.6);;
-      }
-      
-      .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-      }
-
-      .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-      
-      .close:hover,
-      .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-      }
-
-    .modal {
-        width: 33%;
-        height: 50%;
-        position: fixed;
-        z-index: 1;
-        overflow: auto;
-        background-color: rgb(140,104,73); /* Fallback color */
-        background-color: rgba(140,104,73,0.6); /* color w/ opacity */
-    }
-
-    .content-favorites {
-
-    }
+    
 
     /* ___Layout___  */
-    /*
+    
 
-    #story-bucket {
+   /*  #story-bucket {
         display: block;
     }
     */
