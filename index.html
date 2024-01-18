@@ -55,7 +55,7 @@
 
 <!--Commodities section-->
       <div class="columns"> <!-- to establish columns-->
-        <section id="stats" class="section column is-two-thirds has-background-white">
+        <section id="stats" class="section column is-8 has-background-white">
 
             <div id="commodities" class="title is-full has-text-centered"><h1 class="newsreader mt-3">Commodity Roundup</h1></div>
             
@@ -63,35 +63,35 @@
                 
               <ul>
                   <!--coffee tab-->
-                  <li class="coffee is-active" data-tab="coffee-price-display">
+                  <li class="coffee is-active toggle-tab"> <data-tab="coffee-price-display">
                     <a>
                       <span class="icon is-large"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i></span>
                       <span>Coffee</span>
                     </a>
                   </li>
                   <!--wheat tab-->                  
-                  <li class="wheat is-active" data-tab="wheat-price-display">
+                  <li class="wheat is-active toggle-tab" data-tab="wheat-price-display">
                     <a>
                       <span class="icon is-large"><i class="fa-solid fa-wheat-awn" aria-hidden="true"></i></span>
                       <span>Wheat</span>
                     </a>
                   </li>
                   <!--copper tab-->
-                  <li class="copper is-active" data-tab="copper-price-display">
+                  <li class="copper is-active toggle-tab" data-tab="copper-price-display">
                     <a>
                       <span class="icon is-large"><i class="fa-solid fa-coins" aria-hidden="true"></i></span>
                       <span>Copper</span>
                     </a>
                   </li>
                   <!--corn tab-->
-                  <li class="corn is-active" data-tab="corn-price-display">
+                  <li class="corn is-active toggle-tab" data-tab="corn-price-display">
                     <a>
                       <span class="icon is-large"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
                       <span>Corn</span>
                     </a>
                   </li>
                   <!--oil tab-->
-                  <li class="oil is-active" data-tab="oil-price-display">
+                  <li class="oil is-active toggle-tab" data-tab="oil-price-display">
                     <a>
                       <span class="icon is-large"><i class="fa-solid fa-truck-droplet" aria-hidden="true"></i></span>
                       <span>Oil</span>
@@ -124,7 +124,7 @@
 					</div>
         </div>
 
-        			  <!--Wheat Panel-->
+        	<!--Wheat Panel-->
 				<div id="wheat-price-display" class="default-hide wheat is-boxed is-fullwidth columns p-6">
 					<div class="background-icon column is-one-quarter">
 						<img src="./assets/images/wheat-icon-rev.png" alt="wheat icon" class="icon-overlay" />
@@ -207,9 +207,10 @@
 						</table>
 					</div>
         </div>
-    </section>
-
-    <section id="links" class="section column is-one-third">
+    </section><!--closes "stats"-->
+<!--Links to Stock Management-->
+    <section id="links" class="section column is-4">
+      
       <div class="title">
         <h1 class="is-small py-4 mb-4 has-text-light"><span class="is-italic">Ready to <span><span class="has-text-weight-bold">Buy? Sell? Trade?</span></h1>
         
@@ -227,7 +228,24 @@
           <button class="button is-responsive is-medium">          
             <p class="is-italic is-size-4 mr-2">Take me to</p><a href="https://signin.acorns.com/"><img src="./assets/images/acorns-logo.png" alt="logo for Acorns"/></a></button>
         </div>
+      </section><!--ends the links section-->
+      </div>
+
+<div class> <!-- to establish columns-->
+<section id="story-bucket" class="column is-8 box">
+  <h1 class="newsreader mt-3">In Other News</h1>
+  <ul id="story-import">
+
+<li id="story1" class="p-2 has-text-left"><button class="btn mr-3 pb-4"><i id="story1-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>See how free clouds are. They just lay around in the sky all day long. Maybe there was an old trapper that lived out here and maybe one day he went to check his beaver traps, and maybe he fell into the river and drowned.</span></li>
+
+<li id="story2" class="p-2 has-text-left"><button class="btn mr-3 pb-4"><i id="story2-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>Let's have a nice tree right here. Nice little clouds playing around in the sky. Any little thing can be your friend if you let it be.</span>/li>
+
+<li id="story3" class="p-2 has-text-left"><button class="btn mr-3"><i id="story3-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>You have to make those little noises or it won't work. I'm gonna start with a little Alizarin crimson and a touch of Prussian blue.</span></li>
+
+  </ul>
+</section>
 </div>
+
         </main>
          <script src="assets/javascript/stocks.js"></script>
     <script src="assets/javascript/snippet.js"></script>
