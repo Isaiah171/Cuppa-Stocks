@@ -96,10 +96,14 @@ li.is-active span {
     }
 
     #links {
-        background-color: var(--copper);
+        background-image: url(../images/links-bg.png);
+        background: linear-gradient(to bottom, #eadece, #fff);
+        background-position-y: center;
+        background-repeat:no-repeat;
         border-color: white;
         border-style: solid;
         border-width: 5px;
+        max-height:fit-content;
     }
     
     /*Text color in the tabs*/
@@ -222,6 +226,60 @@ li.is-active span {
     z-index: 1;
 }
     
+    #favorites-access button {
+        border:none;
+        background:none;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        bottom:20px;
+        right: 20px;
+        width: 90%;
+        height: 90%;
+        overflow: auto;
+        background-color: rgba(140,104,73,0.6);;
+      }
+      
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+    .modal {
+        width: 33%;
+        height: 50%;
+        position: fixed;
+        z-index: 1;
+        overflow: auto;
+        background-color: rgb(140,104,73); /* Fallback color */
+        background-color: rgba(140,104,73,0.6); /* color w/ opacity */
+    }
+
+    .content-favorites {
+
+    }
+
     /* ___Layout___  */
     
 
