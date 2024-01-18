@@ -201,7 +201,7 @@ var getSpyValue = async () => {
         console.log("Closing value of S&P 500:", alteredValue);
 
         // Update the HTML element
-        document.getElementById("s-and-p-populate").textContent = `Closing value of S&P 500: ${alteredValue}`;
+        document.getElementById("sp2").textContent ="$" + alteredValue;
     } catch (error) {
         console.error('Error in getSpyValue:', error.message);
     }
@@ -237,7 +237,7 @@ var getDiaValue = async () => {
         console.log("Closing value of Dow Jones:", alteredValue);
 
         // Update the HTML element
-        document.getElementById("dow-populate").textContent = `Closing value of Dow Jones: ${alteredValue}`;
+        document.getElementById("dow2").textContent = "$" + alteredValue;
     } catch (error) {
         console.error('Error in getDiaValue:', error.message);
     }
@@ -273,7 +273,7 @@ var getNdaqValue = async () => {
         console.log("Closing value of NASDAQ:", alteredValue);
 
         // Update the HTML element
-        document.getElementById("nasdaq-populate").textContent = `Closing value of NASDAQ: ${alteredValue}`;
+        document.getElementById("ndaq2").textContent = "$" + alteredValue;
     } catch (error) {
         console.error('Error in getNdaqValue:', error.message);
     }

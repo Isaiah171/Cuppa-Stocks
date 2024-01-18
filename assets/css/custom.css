@@ -22,11 +22,11 @@ sky blue storm #697eab (define as custom variable)
         text-align: center;
     }
     
-/*
+
 .default-hide {
     display: none !important;
 }
-*/
+
 
 .show {
     display: block;
@@ -200,11 +200,28 @@ li.is-active span {
         border-top: solid 2px var(--sky-blue-storm);
         border-bottom: solid 2px var(--sky-blue-storm);
     }
+
+    /* Custom class for styling index numbers */
+  .number {
+    font-size: 50px; 
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
     
     /* ___Layout___  */
-    /*
+    
 
-    #story-bucket {
+   /*  #story-bucket {
         display: block;
     }
     */
