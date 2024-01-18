@@ -1,3 +1,11 @@
+//The goal of this portion of javascript code was to enable data to be pulled from the Alpha Vantage API and 
+//displayed in a useful and understandable manner for the end user. Commodity information was pulled for the sake of
+// an interactive table which lets the user toggle between commodity information for coffee (of course!), corn, wheat, copper,
+//and oil. Data is also pulled from the Alpha Vantage API to allow the user to see the performance of the Dow Jones, S&P 500,
+//and NASDAQ indicies for that day (closing values are displayed). The javascript in this code was designed to obtain data from 
+// Alpha Vantage, convert it to a JSON object, refine the data from that object, and then manipulate it to be easily understood
+//by the end user.
+
 //Define variables to be used
 var getCoffeeValue = async (commodity, interval = 'monthly', elementId) => {
     // API URL is set with correct endpoints
