@@ -87,6 +87,14 @@ li.is-active span {
     .is-active.oil {
         background-color: var(--oil);
     }
+
+    span.icon {
+        
+    }
+
+    #commodity-price-display {
+        margin: 0;
+    }
     
     #coffee-price-display, #wheat-price-display, #copper-price-display, #corn-price-display, #oil-price-display {
         background-image: url(../images/analytics-graph.png);
@@ -138,7 +146,7 @@ li.is-active span {
       }
     
     
-     Override the background color of the active tab
+     /*Override the background color of the active tab*/
     .tabs.is-tab .is-active .coffee {
         background-color:var(--coffee); 
     }
@@ -150,9 +158,9 @@ li.is-active span {
       }
       
     
-    .column {
-        margin: 1em !important; 
-        padding: .5em !important; 
+    body .columns {
+        margin: 1em; 
+        padding: .5em; 
        /* background-color: var(--sky-blue); */
     }
     
