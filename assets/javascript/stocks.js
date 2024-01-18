@@ -1,136 +1,177 @@
-var getCoffeeValue = async (commodity,interval='monthly') => {
+//Define variables to be used
+var getCoffeeValue = async (commodity, interval = 'monthly', elementId) => {
     // API URL is set with correct endpoints
     var apiUrl = `https://www.alphavantage.co/query?function=${commodity}&interval=${interval}&apikey=QFTUYULMA5M1ZW53`;
 
     try {
-        //used to fetch Alpha Vantage API url
+        // used to fetch Alpha Vantage API url
         var answer = await fetch(apiUrl);
 
-        if (answer==false) {
+        if (!answer.ok) {
             throw new Error(`Error: ${answer.status} - ${answer.statusText}`);
         }
-        //used to obtain data from the Alpha Vantage as a json object
+
+        // used to obtain data from Alpha Vantage as a json object
         var info = await answer.json();
-        //Most recent data is selected and then the value is manipulated to convert cents to dollars and round to the nearest hundreth
-        console.log(`${commodity} data (${interval}):`,(info.data[0].value/100).toFixed(2));
+
+        // Most recent data is selected and then the value is manipulated to convert cents to dollars and round to the nearest hundreth
+        var finalValue = (info.data[0].value / 100).toFixed(2);
+
+        // Display the result in the console
+        console.log(`${commodity} data (${interval}):`, finalValue);
+
+        // Update the information in the table corresponding to the specified ID
+        document.getElementById(elementId).textContent = `$ ${finalValue} per/lb`;
     } catch (error) {
-        console.error('no coffee for you!:', error.message);
+        //reports an error in obtaining information
+        console.error(`NO COFFEE FOR YOU`, error.message);
     }
 };
 
-// Call the function to fetch the data
-getCoffeeValue('COFFEE');
+// Calls the function to fetch and display data for coffee with different intervals and element IDs
+getCoffeeValue('COFFEE', 'monthly', 'coffee-m');
+getCoffeeValue('COFFEE', 'quarterly', 'coffee-q');
+getCoffeeValue('COFFEE', 'annual', 'coffee-a');
 
-var getCornValue = async (commodity,interval='monthly') => {
+//Variables are defined 
+var getCornValue = async (commodity, interval = 'monthly', elementId) => {
     // API URL is set with correct endpoints
     var apiUrl = `https://www.alphavantage.co/query?function=${commodity}&interval=${interval}&apikey=QFTUYULMA5M1ZW53`;
 
     try {
-        //used to fetch Alpha Vantage API url
+        // used to fetch Alpha Vantage API url
         var answer = await fetch(apiUrl);
 
-        if (answer==false) {
+        if (!answer.ok) {
             throw new Error(`Error: ${answer.status} - ${answer.statusText}`);
         }
-        //used to obtain data from the Alpha Vantage as a json object
+
+        // used to obtain data from Alpha Vantage as a json object
         var info = await answer.json();
-        //Most recent data is selected and then the value is manipulated to round to the nearest hundreth
-        console.log(`${commodity} data (${interval}):`, Math.round(info.data[0].value * 100)/100);
+
+        // Most recent data is selected and then the value is manipulated to round to the nearest hundreth
+        var finalValue = Math.round(info.data[0].value * 100) / 100;
+
+        // Display the result in the console
+        console.log(`${commodity} data (${interval}):`, finalValue);
+
+        // Update the HTML element with the specified ID
+        document.getElementById(elementId).textContent = `$ ${finalValue} per/ton`;
     } catch (error) {
-        console.error('no corn for you!:', error.message);
+        //logs an error if there is trouble getting data
+        console.error(`NO CORN FOR YOU`, error.message);
     }
 };
 
-// Call the function to fetch the data
-getCornValue('CORN');
+// Calls the function to fetch and display data for corn with different intervals and element IDs
+getCornValue('CORN', 'monthly', 'corn-monthly');
+getCornValue('CORN', 'quarterly', 'corn-quarterly');
+getCornValue('CORN', 'annual', 'corn-annual');
 
-var getWheatValue = async (commodity,interval='monthly') => {
+//variables are defined
+var getWheatValue = async (commodity, interval = 'monthly', elementId) => {
     // API URL is set with correct endpoints
     var apiUrl = `https://www.alphavantage.co/query?function=${commodity}&interval=${interval}&apikey=QFTUYULMA5M1ZW53`;
 
     try {
-        //used to fetch Alpha Vantage API url
+        // used to fetch Alpha Vantage API url
         var answer = await fetch(apiUrl);
 
-        if (answer==false) {
+        if (!answer.ok) {
             throw new Error(`Error: ${answer.status} - ${answer.statusText}`);
         }
-        //used to obtain data from the Alpha Vantage as a json object       
+
+        // used to obtain data from Alpha Vantage as a json object
         var info = await answer.json();
-        //Most recent data is selected and then the value is manipulated to round to the nearest hundreth
-        console.log(`${commodity} data (${interval}):`, Math.round(info.data[0].value * 100)/100);
+
+        // Most recent data is selected and then the value is manipulated to round to the nearest hundreth
+        var finalValue = Math.round(info.data[0].value * 100) / 100;
+
+        // Display the result in the console
+        console.log(`${commodity} data (${interval}):`, finalValue);
+
+        // Update the HTML element with the specified ID
+        document.getElementById(elementId).textContent = `$ ${finalValue} per/ton`;
     } catch (error) {
-        console.error('no wheat for you!:', error.message);
+        //logs error if data is unable to be fetched
+        console.error(`NO WHEAT FOR YOU`, error.message);
     }
 };
 
-// Call the function to fetch the data
-getWheatValue('WHEAT');
+// Calls the function to fetch and display data for wheat with different intervals and element IDs
+getWheatValue('WHEAT', 'monthly', 'wheat-monthly');
+getWheatValue('WHEAT', 'quarterly', 'wheat-quarterly');
+getWheatValue('WHEAT', 'annual', 'wheat-annual');
 
-        
-var getCopperValue = async (commodity,interval='monthly') => {
+//variables are defined        
+var getCopperValue = async (commodity, interval = 'monthly', elementId) => {
     // API URL is set with correct endpoints
     var apiUrl = `https://www.alphavantage.co/query?function=${commodity}&interval=${interval}&apikey=QFTUYULMA5M1ZW53`;
 
     try {
-        //used to fetch Alpha Vantage API url
+        // used to fetch Alpha Vantage API url
         var answer = await fetch(apiUrl);
 
-        if (answer==false) {
+        if (!answer.ok) {
             throw new Error(`Error: ${answer.status} - ${answer.statusText}`);
         }
-        //used to obtain data from the Alpha Vantage as a json object
+
+        // used to obtain data from Alpha Vantage as a json object
         var info = await answer.json();
-        //Most recent data is selected and then the value is manipulated to round to the nearest hundreth
-        console.log(`${commodity} data (${interval}):`, Math.round(info.data[0].value * 100)/100);
+
+        // Most recent data is selected and then the value is manipulated to round to the nearest hundreth
+        var finalValue = Math.round(info.data[0].value * 100) / 100;
+
+        // Display the result in the console
+        console.log(`${commodity} data (${interval}):`, finalValue);
+
+        // Update the HTML element with the specified ID
+        document.getElementById(elementId).textContent = `$${finalValue} per/ton`;
     } catch (error) {
-        console.error('no copper for you!:', error.message);
+        //logs an error if data is unable to be fetched
+        console.error(`Error in getCopperValue (${commodity}, ${interval}):`, error.message);
     }
 };
 
-// Call the function to fetch the data
-getCopperValue('COPPER');
+// Calls the function to fetch and display data for copper with different intervals and element IDs
+getCopperValue('COPPER', 'monthly', 'copper-monthly');
+getCopperValue('COPPER', 'quarterly', 'copper-quarterly');
+getCopperValue('COPPER', 'annual', 'copper-annual');
 
-var selectIntervals = (interval) => {
-    // Calls the function to change intervals for coffee
-    getCoffeeValue('COFFEE', interval);
-
-    // Calls the function to change intervals for corn
-    getCornValue('CORN', interval);
-
-    // Calls the function to change intervals for wheat
-    getWheatValue('WHEAT', interval);
-
-    // Calls the function to change intervals for copper
-    getCopperValue('COPPER', interval);
-};
-
-var getOilValue = async (commodity,interval='daily') => {
+//Defines the variables
+var getOilValue = async (commodity, interval = 'daily', elementId) => {
     // API URL is set with correct endpoints
     var apiUrl = `https://www.alphavantage.co/query?function=${commodity}&interval=${interval}&apikey=QFTUYULMA5M1ZW53`;
+
     try {
-        //used to fetch Alpha Vantage API url
+        // used to fetch Alpha Vantage API url
         var answer = await fetch(apiUrl);
 
-        if (answer==false) {
+        if (!answer.ok) {
             throw new Error(`Error: ${answer.status} - ${answer.statusText}`);
         }
-        //used to obtain data from the Alpha Vantage as a json object
+
+        // used to obtain data from Alpha Vantage as a json object
         var info = await answer.json();
+
+        // Displays the results in the console
         console.log(`${commodity} data (${interval}):`, info.data[0].value);
+
+        // Update the HTML element with the specified ID
+        document.getElementById(elementId).textContent = `$ ${info.data[0].value} per/barrel`;
     } catch (error) {
-        console.error('no oil for you!:', error.message);
+        //logs error if data is unable to be fetched
+        console.error(`Error in getOilValue (${commodity}, ${interval}):`, error.message);
     }
 };
-// Calls the function to fetch the data
-getOilValue('WTI');
 
-// Calls the function to set intervals for oil
-var oilIntervals = (interval) => {
-getOilValue('WTI', interval);
-};
+// Call the function to fetch and display data for oil with different intervals and element IDs
+getOilValue('WTI', 'daily', 'oil-daily');
+getOilValue('WTI', 'weekly', 'oil-weekly');
+getOilValue('WTI', 'monthly', 'oil-monthly');
 
-//For displaying index values at the top of the app
+
+// For displaying index values at the top of the app
 var getSpyValue = async () => {
     // API URL is set with correct endpoints
     var apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=SPY&outputsize=compact&apikey=QFTUYULMA5M1ZW53`;
@@ -151,33 +192,22 @@ var getSpyValue = async () => {
         const getMostRecentData = info["Time Series (Daily)"][todaysInfo];
 
         // Display the result in the console
-        console.log("Most recent data:", getMostRecentData);
+        console.log("Most recent data for S&P 500:", getMostRecentData);
 
         // Manipulate the value to get only the necessary information from the json object
         const alteredValue = manipulateData(getMostRecentData);
 
         // Display the manipulated value in the console as proof of concept
-        console.log("closing value of S&P 500:", alteredValue);
+        console.log("Closing value of S&P 500:", alteredValue);
+
+        // Update the HTML element
+        document.getElementById("s-and-p-populate").textContent = `Closing value of S&P 500: ${alteredValue}`;
     } catch (error) {
-        
         console.error('Error in getSpyValue:', error.message);
     }
 };
 
-function getMostRecentDate(data) {
-    // Pull from the most recent date of the json object
-    return Object.keys(data["Time Series (Daily)"])[0];
-}
-
-function manipulateData(data) {
-    // convert the "close" property of the data to a number (dollar value with decimals to a hundreth)
-    return Number(data["4. close"]);
-}
-
-// Call the function to fetch the data
-getSpyValue();
-
-//For displaying index values at the top of the app
+// For displaying index values at the top of the app
 var getDiaValue = async () => {
     // API URL is set with correct endpoints
     var apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=DIA&outputsize=compact&apikey=QFTUYULMA5M1ZW53`;
@@ -198,33 +228,22 @@ var getDiaValue = async () => {
         const getMostRecentData = info["Time Series (Daily)"][todaysInfo];
 
         // Display the result in the console
-        console.log("Most recent data:", getMostRecentData);
+        console.log("Most recent data for Dow Jones:", getMostRecentData);
 
         // Manipulate the value to get only the necessary information from the json object
         const alteredValue = manipulateData(getMostRecentData);
 
         // Display the manipulated value in the console as proof of concept
-        console.log("closing value of DOW JONES:", alteredValue);
+        console.log("Closing value of Dow Jones:", alteredValue);
+
+        // Update the HTML element
+        document.getElementById("dow-populate").textContent = `Closing value of Dow Jones: ${alteredValue}`;
     } catch (error) {
-        
-        console.error('Error in getDjiValue:', error.message);
+        console.error('Error in getDiaValue:', error.message);
     }
 };
 
-function getMostRecentDate(data) {
-    // Pull from the most recent date of the json object
-    return Object.keys(data["Time Series (Daily)"])[0];
-}
-
-function manipulateData(data) {
-    // convert the "close" property of the data to a number (dollar value with decimals to a hundreth)
-    return Number(data["4. close"]);
-}
-
-// Call the function to fetch the data
-getDiaValue();
-
-//For displaying index values at the top of the app
+// For displaying index values at the top of the app
 var getNdaqValue = async () => {
     // API URL is set with correct endpoints
     var apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=NDAQ&outputsize=compact&apikey=QFTUYULMA5M1ZW53`;
@@ -245,15 +264,17 @@ var getNdaqValue = async () => {
         const getMostRecentData = info["Time Series (Daily)"][todaysInfo];
 
         // Display the result in the console
-        console.log("Most recent data:", getMostRecentData);
+        console.log("Most recent data for NASDAQ:", getMostRecentData);
 
         // Manipulate the value to get only the necessary information from the json object
         const alteredValue = manipulateData(getMostRecentData);
 
         // Display the manipulated value in the console as proof of concept
-        console.log("closing value of NASDAQ:", alteredValue);
+        console.log("Closing value of NASDAQ:", alteredValue);
+
+        // Update the HTML element
+        document.getElementById("nasdaq-populate").textContent = `Closing value of NASDAQ: ${alteredValue}`;
     } catch (error) {
-        
         console.error('Error in getNdaqValue:', error.message);
     }
 };
@@ -270,3 +291,5 @@ function manipulateData(data) {
 
 // Call the function to fetch the data
 getNdaqValue();
+getDiaValue();
+getSpyValue();
