@@ -13,7 +13,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,700&display=swap" rel="stylesheet">
 </head>
-
+<div id="myModal" class="modal">
+  <p>Added to favorites!</p>
+</div>
 <body class="has-text-centered has-background-light">
 
         <!--Cuppa Stocks Masthead-->
@@ -41,12 +43,18 @@
                     </div>
 
                     <div id="indices" class="columns is-full has-background-dark">
-                        <div id="dow-populate" class="column is-one-fifth has-background-light">DJIA</div>
-                        <div id="s-and-p-populate" class="column is-one-fifth has-background-light">S&P 500</div>
-                        <div id="nasdaq-populate" class="column is-one-fifth has-background-light">Nasdaq</div>
-                        <div id="hold-my-coffee" class="column is-two-fifths p-5">
-                            <img src="./assets/images/non-steamy-cuppa.png" class="size-overide" />
-                       </div>
+                      <div id="dow1" class="column is-one-fifth has-background-light">Closing Value of Dow Jones
+                          <p id="dow2"class="number"></p>
+                      </div>
+                      <div id="sp1" class="column is-one-fifth has-background-light"> Closing Value of S&P 500
+                          <p id="sp2"class="number"></p>
+                      </div>
+                      <div id="ndaq1" class="column is-one-fifth has-background-light"> Closing Value of NASDAQ
+                          <p id="ndaq2"class="number"></p>
+                      </div>
+                      <div id="hold-my-coffee" class="column is-two-fifths p-5">
+                          <img src="./assets/images/non-steamy-cuppa.png" class="size-overide" />
+                      </div>
                    </div>
                   
                 </section>
@@ -217,32 +225,30 @@
         
         <div class="box mx-5">
           <button class="button is-responsive is-medium">          
-            <p class="is-italic is-size-4 mr-2">Take me to</p><a href="https://robinhood.com/login"><img src="./assets/images/robinhood-logo.png" alt="logo for Robinhood"/></a></button>
+            <p class="is-italic is-size-4 mr-2">Take me to</p><a target="_blank" href="https://robinhood.com/login"><img src="./assets/images/robinhood-logo.png" alt="logo for Robinhood"/></a></button>
         </div>
 
         <div class="box mx-5">
           <button class="button is-responsive is-medium">          
-            <p class="is-italic is-size-4 mr-2">Take me to</p><a href="https://passport.webull.com/auth/simple/login?source=brand-gl-search-pc&hl=en&redirect_uri=https%3A%2F%2Fwww.webull.com%2Fcenter"><img src="./assets/images/webull-logo.png" alt="logo for Robinhood"/></a></button>
+            <p class="is-italic is-size-4 mr-2">Take me to</p><a target="_blank" href="https://passport.webull.com/auth/simple/login?source=brand-gl-search-pc&hl=en&redirect_uri=https%3A%2F%2Fwww.webull.com%2Fcenter"><img src="./assets/images/webull-logo.png" alt="logo for Robinhood"/></a></button>
         </div>
 
         <div class="box mx-5">
           <button class="button is-responsive is-medium">          
-            <p class="is-italic is-size-4 mr-2">Take me to</p><a href="https://signin.acorns.com/"><img src="./assets/images/acorns-logo.png" alt="logo for Acorns"/></a></button>
+            <p class="is-italic is-size-4 mr-2">Take me to</p><a target="_blank" href="https://signin.acorns.com/"><img src="./assets/images/acorns-logo.png" alt="logo for Acorns"/></a></button>
         </div>
+        <h2>Favorite News</h2>
+        <div id="favorite" class="box mx-5">
+          
+        </div>
+        <button onclick="clearFavorites()">Clear Favorites</button>
       </section><!--ends the links section-->
       </div>
 
 <div class> <!-- to establish columns-->
 <section id="story-bucket" class="column is-8 box">
   <h1 class="newsreader mt-3">In Other News</h1>
-  <ul id="story-import">
-
-<li id="story1" class="p-2 has-text-left"><button id="story1button" class="btn mr-3 pb-4"><i id="story1-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>See how free clouds are. They just lay around in the sky all day long. Maybe there was an old trapper that lived out here and maybe one day he went to check his beaver traps, and maybe he fell into the river and drowned.</span></li>
-
-<li id="story2" class="p-2 has-text-left"><button id="story2button"  class="btn mr-3 pb-4"><i id="story2-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>Let's have a nice tree right here. Nice little clouds playing around in the sky. Any little thing can be your friend if you let it be.</span>/li>
-
-<li id="story3" class="p-2 has-text-left"><button id="story3button"  class="btn mr-3"><i id="story3-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>You have to make those little noises or it won't work. I'm gonna start with a little Alizarin crimson and a touch of Prussian blue.</span></li>
-
+  <ul id="story-import" class="p-2 has-text-left">
   </ul>
 </section>
 </div>

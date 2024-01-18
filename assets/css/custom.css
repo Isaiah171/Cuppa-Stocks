@@ -205,6 +205,10 @@ li.is-active span {
   .number {
     font-size: 50px; 
 }
+
+#favorite {
+    font-size: 30px; 
+}
 .modal {
     display: none;
     position: fixed;

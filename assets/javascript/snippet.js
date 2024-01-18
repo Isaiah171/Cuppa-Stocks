@@ -88,7 +88,7 @@ function showMeNewsSnippets(newsData) {
         // Function to display favorites in the specified section of the HTML page
         function showFavoritesContainer() {
             let favoritesData = JSON.parse(localStorage.getItem('favorites')) || [];
-            let favoritesContainer = document.getElementById("favorites");
+            let favoritesContainer = document.getElementById("favorite");
             favoritesContainer.innerHTML = ""; // Clears the previous content of the favorites section
 
             favoritesData.forEach((fav, index) => {
