@@ -27,6 +27,10 @@ sky blue storm #697eab (define as custom variable)
     display: none !important;
 }
 
+.show {
+    display: block;
+}
+
 
 li span {
     color: black;
@@ -197,7 +201,11 @@ li.is-active span {
     }
     
     /* ___Layout___  */
-    
-    div#marketeaux-import-stories {
-        column-count: 2;
+    /*
+
+    #story-bucket {
+        display: block;
     }
+    */
+
+
