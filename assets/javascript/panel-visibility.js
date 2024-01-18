@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', mainFunction() {
   const closeButton = document.querySelector('.close');
   
   openModalButton.addEventListener('click', () => {
-    modal.style.display = 'block';
+    modal.classList.add('is-active');
   });
   
   closeButton.addEventListener('click', () => {
