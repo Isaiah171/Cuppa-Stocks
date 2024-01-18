@@ -64,9 +64,9 @@ var getCornValue = async (commodity, interval = 'monthly', elementId) => {
 };
 
 // Calls the function to fetch and display data for corn with different intervals and element IDs
-getCornValue('CORN', 'monthly', 'corn-monthly');
-getCornValue('CORN', 'quarterly', 'corn-quarterly');
-getCornValue('CORN', 'annual', 'corn-annual');
+getCornValue('CORN', 'monthly', 'corn-m');
+getCornValue('CORN', 'quarterly', 'corn-q');
+getCornValue('CORN', 'annual', 'corn-a');
 
 //variables are defined
 var getWheatValue = async (commodity, interval = 'monthly', elementId) => {
@@ -99,9 +99,9 @@ var getWheatValue = async (commodity, interval = 'monthly', elementId) => {
 };
 
 // Calls the function to fetch and display data for wheat with different intervals and element IDs
-getWheatValue('WHEAT', 'monthly', 'wheat-monthly');
-getWheatValue('WHEAT', 'quarterly', 'wheat-quarterly');
-getWheatValue('WHEAT', 'annual', 'wheat-annual');
+getWheatValue('WHEAT', 'monthly', 'wheat-m');
+getWheatValue('WHEAT', 'quarterly', 'wheat-q');
+getWheatValue('WHEAT', 'annual', 'wheat-a');
 
 //variables are defined        
 var getCopperValue = async (commodity, interval = 'monthly', elementId) => {
@@ -134,9 +134,9 @@ var getCopperValue = async (commodity, interval = 'monthly', elementId) => {
 };
 
 // Calls the function to fetch and display data for copper with different intervals and element IDs
-getCopperValue('COPPER', 'monthly', 'copper-monthly');
-getCopperValue('COPPER', 'quarterly', 'copper-quarterly');
-getCopperValue('COPPER', 'annual', 'copper-annual');
+getCopperValue('COPPER', 'monthly', 'copper-m');
+getCopperValue('COPPER', 'quarterly', 'copper-q');
+getCopperValue('COPPER', 'annual', 'copper-a');
 
 //Defines the variables
 var getOilValue = async (commodity, interval = 'daily', elementId) => {
@@ -166,9 +166,9 @@ var getOilValue = async (commodity, interval = 'daily', elementId) => {
 };
 
 // Call the function to fetch and display data for oil with different intervals and element IDs
-getOilValue('WTI', 'daily', 'oil-daily');
-getOilValue('WTI', 'weekly', 'oil-weekly');
-getOilValue('WTI', 'monthly', 'oil-monthly');
+getOilValue('WTI', 'daily', 'oil-d');
+getOilValue('WTI', 'weekly', 'oil-w');
+getOilValue('WTI', 'monthly', 'oil-m');
 
 
 // For displaying index values at the top of the app
