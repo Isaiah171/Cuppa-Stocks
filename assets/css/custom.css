@@ -22,10 +22,11 @@ sky blue storm #697eab (define as custom variable)
         text-align: center;
     }
     
-
+/*
 .default-hide {
     display: none !important;
 }
+*/
 
 .show {
     display: block;
