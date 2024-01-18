@@ -104,7 +104,7 @@
 			  <div id="commodity-price-display" class="is-fullwidth">
 
 			  <!--Coffee Panel-->
-				<div id="coffee-price-display" class="coffee is-boxed is-fullwidth columns default-hide p-6">
+				<div id="coffee-price-display" class="coffee is-boxed is-fullwidth columns default-hide is-active p-6">
 					<div class="background-icon column is-one-quarter">
 						<img src="./assets/images/coffee-icon-rev.png" alt="coffee icon" class="icon-overlay" />
 					</div>
@@ -125,7 +125,7 @@
         </div>
 
         	<!--Wheat Panel-->
-				<div id="wheat-price-display" class="default-hide wheat is-boxed is-fullwidth columns p-6">
+				<div id="wheat-price-display" class="default-hide is-active wheat is-boxed is-fullwidth columns p-6">
 					<div class="background-icon column is-one-quarter">
 						<img src="./assets/images/wheat-icon-rev.png" alt="wheat icon" class="icon-overlay" />
 					</div>
@@ -166,15 +166,6 @@
 					</div>
         </div>
 
-
-        <section id="links" class="column is-one-quarter">
-            <div class="columns is-full">
-                <block class="title">Ready to Buy? Sell? Trade?</block>
-                <block><h3>Take me to</h3><a class="button" target="_blank" href="https://robinhood.com/login"><img src="./assets/images/robinhood-logo.png" alt="logo for Robinhood"/></a></block>
-                <block><h3>Take me to</h3><a class="button" target="_blank" href="https://passport.webull.com/auth/simple/login?source=brand-gl-search-pc&hl=en&redirect_uri=https%3A%2F%2Fwww.webull.com%2Fcenter"><img src="./assets/images/webull-logo.png" alt="logo for Webull"/></a></block>
-                <block><h3>Take me to</h3><a class="button" target="_blank" href="https://signin.acorns.com/"><img src="./assets/images/acorns-logo.png" alt="logo for Acorns"/></a></block> 
-             </div>
-        </section>
         <!--Corn Panel-->
 				<div id="corn-price-display" class="corn is-boxed is-fullwidth columns default-hide is-active p-6">
 					<div class="background-icon column is-one-quarter is-active">
@@ -221,7 +212,7 @@
     <section id="links" class="section column is-4">
       
       <div class="title">
-        <h1 class="is-small py-4 mb-4 has-text-light"><span class="is-italic">Ready to <span><span class="has-text-weight-bold">Buy? Sell? Trade?</span></h1>
+        <h1 class="is-small py-4 mb-4 has-text-dark"><span class="is-italic">Ready to <span><span class="has-text-weight-bold">Buy? Sell? Trade?</span></h1>
         
         <div class="box mx-5">
           <button class="button is-responsive is-medium">          
@@ -240,18 +231,35 @@
       </section><!--ends the links section-->
       </div>
 
-<div class> <!-- to establish columns-->
+<div class="columns"> <!-- to establish columns-->
 <section id="story-bucket" class="column is-8 box">
   <h1 class="newsreader mt-3">In Other News</h1>
   <ul id="story-import">
 
-<li id="story1" class="p-2 has-text-left"><button id="story1button" class="btn mr-3 pb-4"><i id="story1-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>See how free clouds are. They just lay around in the sky all day long. Maybe there was an old trapper that lived out here and maybe one day he went to check his beaver traps, and maybe he fell into the river and drowned.</span></li>
+<li id="story1" class="p-2 has-text-left"><button id="story1button" class="btn mr-3 mb-4"><i id="story1-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>See how free clouds are. They just lay around in the sky all day long. Maybe there was an old trapper that lived out here and maybe one day he went to check his beaver traps, and maybe he fell into the river and drowned.</span></li>
 
-<li id="story2" class="p-2 has-text-left"><button id="story2button"  class="btn mr-3 pb-4"><i id="story2-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>Let's have a nice tree right here. Nice little clouds playing around in the sky. Any little thing can be your friend if you let it be.</span>/li>
+<li id="story2" class="p-2 has-text-left"><button id="story2button"  class="btn mr-3 mb-4"><i id="story2-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>Let's have a nice tree right here. Nice little clouds playing around in the sky. Any little thing can be your friend if you let it be.</span></li>
 
-<li id="story3" class="p-2 has-text-left"><button id="story3button"  class="btn mr-3"><i id="story3-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>You have to make those little noises or it won't work. I'm gonna start with a little Alizarin crimson and a touch of Prussian blue.</span></li>
+<li id="story3" class="p-2 has-text-left"><button id="story3button"  class="btn mr-3 mb-4"><i id="story3-fave" class="fa-solid fa-heart has-text-grey-light"></i></button><span>You have to make those little noises or it won't work. I'm gonna start with a little Alizarin crimson and a touch of Prussian blue.</span></li>
 
   </ul>
+</section>
+
+<section id="favorites-access" class="column is-3 container">
+ <button id="open-modal-favorites"><img src="./assets/images/cuppaFavorites.png" alt="Coffee Bag to click on to access saved favorite stories" /></button>
+
+ <div id="modal">
+  <div class="modal-favorites">
+    <div class="content-favorites has-background-light m-2 p-3 is-bordered modal-content">
+    <h1 class="newsreader">My Favorite Stories</h1>
+    <ul id="favorites-saved">
+      <li></li>
+    </ul>
+  </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
 </section>
 </div>
 
@@ -259,5 +267,20 @@
          <script src="assets/javascript/stocks.js"></script>
     <script src="assets/javascript/snippet.js"></script>
         <script src="./assets/javascript/date.js"></script>
+        <script>
+ //modal test
+ const openModalButton = document.getElementById('open-modal-favorites');
+  const modal = document.getElementById('modal');
+  const closeButton = document.querySelector('.close');
+  
+  openModalButton.addEventListener('click', () => {
+    modal.classList.add('is-active');
+  });
+  
+  closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+        </script>
 </body>
 </html>
