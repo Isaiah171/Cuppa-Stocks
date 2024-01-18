@@ -42,7 +42,7 @@
                         <h1 class="newsreader">Today's Top Story</h1>
                     </div>
 <!---->
-                    <div id="indices" class="columns is-1 is-full has-background-dark">
+                    <div id="indices" class="columns is-vcentered is-1 is-full has-background-dark">
                       <div id="dow1" class="column is-one-fifth p-3 has-background-light"><p>Closing Value of</p>
                         <h2 class="is-size-4">Dow Jones</h2>
                           <p id="dow2"class="is-size-3 has-text-weight-bold"></p>
@@ -65,13 +65,14 @@
 
             </div>
 
-<!--Commodities section-->
-      <div class="columns"> <!-- to establish columns-->
+<!--Commodities-->
+      <div class="columns is multi-line"> <!-- to establish columns-->
+        
         <section id="stats" class="section column is-8 has-background-white">
 
-            <div id="commodities" class="title is-full has-text-centered"><h1 class="newsreader mt-3">Commodity Roundup</h1></div>
+            <div id="commodities" class="title is-12 has-text-centered"><h1 class="newsreader mt-3">Commodity Roundup</h1></div>
             
-            <div  id="tab-holder" class="tabs is-boxed is-fullwidth mb-0 ">
+            <div  id="tab-holder" class="tabs is-boxed is-12 mb-0 ">
                 
               <ul>
                   <!--coffee tab-->
@@ -113,16 +114,16 @@
               </div>
 			  
 			  <!--Commodity Price Panels -->
-			  <div id="commodity-price-display" class="column is-fullwidth">
+			  <div id="commodity-price-display" class="column is-12">
 
         			  <!--Coffee Panel -->
-				<div id="coffee-price-display" class="coffee tab-pane is-fullwidth columns default-hide is-active p-3">
-          <div class="column is-one-quarter">
+				<div id="coffee-price-display" class="coffee tab-pane is-12 columns default-hide is-active p-3">
+          <div class="column is-4">
 					<div class="background-icon">
 						<img src="./assets/images/coffee-icon-rev.png" alt="coffee icon" class="icon-overlay" />
 					</div>
           </div>
-					<div id="coffee-stats" class="column is-three-quarters is-vcentered">
+					<div id="coffee-stats" class="column is-8 is-vcentered">
 						<table class="table is-size-4">
 							<tr>
 								<td>Monthly</td>
@@ -179,7 +180,6 @@
 						</table>
 					</div>
         </div>
-
 
                 <!--Corn Panel-->
 				<div id="corn-price-display" class="corn tab-pane is-boxed is-fullwidth columns default-hide is-active p-6">
@@ -244,20 +244,28 @@
           <button class="button is-responsive is-medium">          
             <p class="is-italic is-size-4 mr-2">Take me to</p><a target="_blank" href="https://signin.acorns.com/"><img src="./assets/images/acorns-logo.png" alt="logo for Acorns"/></a></button>
         </div>
-        <h2>Favorite News</h2>
-        <div id="favorite" class="box mx-5">
-          
-        </div>
-        <button onclick="clearFavorites()">Clear Favorites</button>
-      </section><!--ends the links section-->
       </div>
+    </section><!--close links section-->
+      </div>
+      
+<!--Stories area-->
+<div class="columns is-12 is-multiline has-background-white"> <!-- to establish columns-->
 
-<div class="columns"> <!-- to establish columns-->
-<section id="story-bucket" class="column is-8 box">
-  <h1 class="newsreader mt-3">In Other News</h1>
+  <!--Stories pulled in-->
+<section id="story-bucket" class="column is-8">
+  <h1 class="newsreader mt-3 mb-2 is-size-3">In Other News</h1>
   <ul id="story-import" class="p-2 has-text-left">
-
  </ul>
+</section>
+<!--Holds saved favorites-->
+<section class="column is-4">
+  <div id="favorite" class="box mx-5">
+    <h2 class="is-size-3 has-text-weight-bold"><i class="fa-solid fa-heart-circle-check"></i></h2>
+    <h2 class="block is-size-4 has-text-weight-bold">My Saved Favorite News</h2>
+  <button onclick="clearFavorites()">Clear Favorites</button>
+  </div>
+</section>
+</div>
 </section>
 
 </div>
