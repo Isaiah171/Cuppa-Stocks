@@ -9,7 +9,7 @@
 
 var getNewsSnippets = async () => {
             // API URL is set with correct endpoints
-            var apiUrl = `https://api.marketaux.com/v1/news/all?published_after=2024-01&limit=3&sentiment_gte=0&language=en&api_token=wiLLDG8j7DrJAFvQaBjPpLWEmV9zGJafetIIMuCM`;
+            var apiUrl = `https://api.marketaux.com/v1/news/all?published_after=2024-01&limit=3&sentiment_gte=0&language=en&api_token=bNXai2UqVdw7PkInBynoRWMSRiJhtz17KmkjxKuj`;
 
             try {
                 // Used to call the Marketaux API URL

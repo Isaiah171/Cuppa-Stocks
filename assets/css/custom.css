@@ -88,7 +88,7 @@ li.is-active span {
         background-color: var(--oil);
     }
     
-    #coffee-stats, #wheat-stats, #copper-stats, #corn-stats, #oil-stats {
+    #coffee-price-display, #wheat-price-display, #copper-price-display, #corn-price-display, #oil-price-display {
         background-image: url(../images/analytics-graph.png);
         background-position: right bottom;
         background-repeat: no-repeat;

@@ -11,7 +11,7 @@ As a user I am interested in having an engaging financial app that I can open in
 The user is advised to try out our table by clicking tabs to see different commodity data being displayed. The user can also view snippets of financial news articles, read the complete article by clicking on the "read more" link, or clicking the heart icon next to the snippet which will allow the user to "favorite" the selected article and save it in the favorites section for enjoyment at a future date.
 
 ## Credits 
-Many helpful tips were found on https://stackoverflow.co/ and https://www.w3schools.com/ All code was written from scratch by Luke Stroehlein and Heidi Toala with much research (and head-banging, and heartbreak) involved along the way.
+Many helpful tips were found on https://stackoverflow.co/ and https://www.w3schools.com/ All code was written from scratch by Luke Stroehlein and Heidi Carrier with much research (and head-banging, and heartbreak) involved along the way.
 
 ## License
 Please refer to LICENSE in the repo.
